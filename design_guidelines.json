@@ -1,0 +1,72 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 4: Swiss & High-Contrast (Dark Variant)",
+  "rationale": "For an enterprise dashboard handling routes, compare, banking, and pooling, a dark high-contrast theme ensures readability, professional authority, and a modern 'control room' feel without overwhelming the user.",
+  "colors": {
+    "background": "#0A0A0A",
+    "surface": "#141414",
+    "surface_hover": "#1A1A1A",
+    "primary": "#FFFFFF",
+    "secondary": "#A3A3A3",
+    "muted": "#525252",
+    "accent_action": "#0055FF",
+    "accent_success": "#00FF66",
+    "accent_danger": "#FF3B30",
+    "border": "rgba(255, 255, 255, 0.1)"
+  },
+  "typography": {
+    "headings": "Manrope",
+    "body": "Inter",
+    "mono": "JetBrains Mono",
+    "hierarchy": {
+      "h1": "text-2xl sm:text-3xl font-semibold tracking-tight text-white",
+      "h2": "text-xl sm:text-2xl font-medium tracking-tight text-white",
+      "h3": "text-lg font-medium text-white",
+      "body": "text-sm text-[#A3A3A3] leading-relaxed",
+      "label": "text-xs font-mono uppercase tracking-[0.2em] text-[#525252]",
+      "data": "text-sm font-medium text-white"
+    }
+  },
+  "layout": {
+    "strategy": "The 'Control Room' Grid",
+    "spacing": "Dense and compact. Use p-6 or p-8 for main containers, p-4 for cards.",
+    "gap": "gap-4 or gap-6 for grids",
+    "radius": "rounded-sm (max 4px) to maintain a sharp, technical aesthetic.",
+    "alignment": "Left-align dense data, tables, and labels. Center align empty states."
+  },
+  "surface_strategies": {
+    "dashboard_cards": "Flat background (#141414), 1px subtle border (border-white/10), no shadow. On hover, slight border color brighten to white/20.",
+    "header": "Solid Background (#0A0A0A) with a hard bottom border (border-white/10)."
+  },
+  "components": {
+    "navigation": "Top navigation bar with Logo (Lucide Icon) + 4 Tabs (Routes, Compare, Banking, Pooling).",
+    "tabs": "Shadcn Tabs. Override default background. Use transparent background with bottom border for active state, or minimalist flat pills.",
+    "tables": "Dense rows. Header uses text-xs font-mono uppercase. Row borders: border-b border-white/5. Hover state on rows: bg-white/[0.02].",
+    "buttons": {
+      "primary": "bg-white text-black hover:bg-gray-200 rounded-sm px-4 py-2 text-sm font-medium transition-colors",
+      "secondary": "bg-transparent border border-white/10 text-white hover:bg-white/5 rounded-sm px-4 py-2 text-sm transition-colors",
+      "action": "bg-[#0055FF] text-white hover:bg-[#0044CC] rounded-sm px-4 py-2 text-sm font-medium transition-colors"
+    },
+    "badges": {
+      "compliant": "border border-[#00FF66]/30 text-[#00FF66] bg-[#00FF66]/10 px-2 py-0.5 rounded-sm text-xs font-medium",
+      "non_compliant": "border border-[#FF3B30]/30 text-[#FF3B30] bg-[#FF3B30]/10 px-2 py-0.5 rounded-sm text-xs font-medium"
+    }
+  },
+  "icons": "lucide-react",
+  "motion": {
+    "micro_interactions": "transition-all duration-200 ease-in-out on all interactive elements (hover, focus, active).",
+    "focus": "focus-visible:ring-1 focus-visible:ring-white focus-visible:outline-none focus-visible:ring-offset-1 focus-visible:ring-offset-[#0A0A0A]"
+  },
+  "testing": {
+    "attributes": "All interactive and key informational elements MUST include data-testid attribute in kebab-case (e.g., data-testid='routes-tab', data-testid='baseline-button')."
+  },
+  "instructions_to_main_agent": [
+    "Implement the UI using React, Tailwind CSS, and Shadcn UI.",
+    "Use mock data locally since no DB is needed.",
+    "Setup FastAPI backend with mock in-memory data for the specified endpoints.",
+    "Ensure the dashboard uses dark mode permanently.",
+    "Apply the styling rules from this JSON carefully. Avoid rounded-lg or heavy shadows.",
+    "Do not use transparent backgrounds for the header without a solid background behind it."
+  ],
+  "image_urls": {}
+}
