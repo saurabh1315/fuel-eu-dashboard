@@ -16,5 +16,17 @@ Live Demo: https://dashboard-hub-181.preview.emergentagent.com/
 - /frontend → UI
 - /backend → API & logic
 
+## 🚀 Run Locally
+
+Frontend:
+cd frontend
+npm install
+npm run dev
+
+Backend:
+cd backend
+npm install
+npm run dev
+
 ## 👨‍💻 Author
 Saurabh (IIT Kanpur)
