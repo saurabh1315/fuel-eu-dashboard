@@ -65,6 +65,7 @@ const BankingTab = () => {
       const response = await axios.post(`${API}/banking/bank`, { amount: parseFloat(bankAmount) });
       setBanking({ ...banking, cb_balance: response.data.new_balance });
       toast.success(response.data.message);
+      alert("Bank action triggered");
       setBankAmount("");
       setBankDialogOpen(false);
     } catch (error) {
@@ -73,6 +74,7 @@ const BankingTab = () => {
       const newBalance = banking.cb_balance + parseFloat(bankAmount);
       setBanking({ ...banking, cb_balance: newBalance });
       toast.success(`Successfully banked $${parseFloat(bankAmount).toLocaleString()}`);
+      alert("Bank action triggered");
       setBankAmount("");
       setBankDialogOpen(false);
     } finally {
@@ -97,6 +99,7 @@ const BankingTab = () => {
       });
       setBanking({ ...banking, cb_balance: banking.cb_balance - response.data.amount_applied });
       toast.success(response.data.message);
+      alert("Apply action triggered");
       setApplyAmount("");
       setApplyDialogOpen(false);
     } catch (error) {
@@ -105,6 +108,7 @@ const BankingTab = () => {
       const newBalance = banking.cb_balance - parseFloat(applyAmount);
       setBanking({ ...banking, cb_balance: newBalance });
       toast.success(`Applied $${parseFloat(applyAmount).toLocaleString()} to route ${applyRouteId}`);
+      alert("Apply action triggered");
       setApplyAmount("");
       setApplyDialogOpen(false);
     } finally {
