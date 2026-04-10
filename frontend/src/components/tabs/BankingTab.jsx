@@ -150,7 +150,6 @@ const BankingTab = () => {
             <DialogContent className="bg-[#141414] border-white/10 text-white">
               <DialogHeader>
                 <DialogTitle className="font-heading text-white">Bank Funds</DialogTitle>
-                <DialogDescription className="text-[#A3A3A3]">Add funds to your CB balance</DialogDescription>
               </DialogHeader>
               <div className="space-y-4 pt-4">
                 <div>
@@ -191,7 +190,6 @@ const BankingTab = () => {
             <DialogContent className="bg-[#141414] border-white/10 text-white">
               <DialogHeader>
                 <DialogTitle className="font-heading text-white">Apply Funds</DialogTitle>
-                <DialogDescription className="text-[#A3A3A3]">Apply funds to a specific route</DialogDescription>
               </DialogHeader>
               <div className="space-y-4 pt-4">
                 <div>

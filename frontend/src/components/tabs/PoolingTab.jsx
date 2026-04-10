@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogDescription } from "../../components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "../../components/ui/dialog";
 import { Loader2, Layers, Plus, Package } from "lucide-react";
 import axios from "axios";
 import { toast } from "sonner";
@@ -111,7 +111,6 @@ const PoolingTab = () => {
           <DialogContent className="bg-[#141414] border-white/10 text-white">
             <DialogHeader>
               <DialogTitle className="font-heading text-white">Create New Pool</DialogTitle>
-              <DialogDescription className="text-[#A3A3A3]">Configure a new route pool</DialogDescription>
             </DialogHeader>
             <div className="space-y-4 pt-4">
               <div>
