@@ -10,9 +10,9 @@ const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("routes");
 
   return (
-    <div className="min-h-screen bg-[#0A0A0A]">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
       {/* Header */}
-      <header className="border-b border-white/10 bg-[#0A0A0A]">
+      <header className="border-b border-white/10 bg-black/50 backdrop-blur-lg">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-white rounded-sm flex items-center justify-center">
